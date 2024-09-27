@@ -1,0 +1,233 @@
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+
+input[type="number"], 
+input[type="text"], 
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f7fafc;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: border 0.3s ease-in-out;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border: 1px solid #0ac5a8;
+}
+
+
+.react-datepicker {
+  border: none;
+  background-color: #fff;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.react-datepicker__header {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name,
+.react-datepicker__day {
+  color: #1a1a1a;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #0ac5a8;
+  color: white;
+}
+
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0ac5a8;
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0dbfa2;
+}
+
+
+.custom-recurrence-box, .recurrence-options-box, .date-selector-box, .calendar-preview-box {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  border: 1px solid #e5e7eb;
+}
+
+.custom-recurrence-box label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+
+.mini-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.mini-calendar-grid div {
+  padding: 10px;
+  background-color: #f7fafc;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+.mini-calendar-grid div.selected {
+  background-color: #0ac5a8;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+}
+
+.date-selector-box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+
+.date-picker-container {
+  flex: 1;
+}
+
+
+.date-display-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f7fafc;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+.formatted-date {
+  font-size: 16px;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+.mini-calendar {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #e2e8f0;
+  border-radius: 4px;
+  color: #1a1a1a;
+  font-weight: bold;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+
+.modal-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  z-index: 1001;
+}
+
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.modal-content {
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
